@@ -1,6 +1,6 @@
 # semantle
 
-Fastest [Semantle](https://semantle.novalis.org/) solver this side of the Mississippi.
+Fastest [Semantle](https://semantle.novalis.org/).
 
 * Roughly 3 average turns to win
 * **Measured against (part of) the `word2vec-google-news-300` vocabulary**
@@ -11,14 +11,11 @@ NOTES:
 * The "average turns to win" benchmark is based on a handful of my empirical observations.
 
 
-![fast car](https://media.giphy.com/media/msboPDDziG50Anu8hz/giphy.gif)
-
-
 ## Install
 
 Install directly from this repository:
 ```bash
-pip install git+https://github.com/fkodom/semantle.git
+pip install git+https://github.com/suneelkumar13/semantle.git
 ```
 
 ## Solve
@@ -47,11 +44,6 @@ play-semantle
 
 
 ## How It Works
-
-Semantle uses Word2Vec [[Wiki](https://en.wikipedia.org/wiki/Word2vec)][[Docs](https://radimrehurek.com/gensim/models/word2vec.html)] to compute the similarity between the target word and each guess. How it works, at a very high level:
-* Using a large corpus of text (Google News), create a vector embedding for each possible word.
-* Note that words with similar semantic meanings are close together in the embedding space.
-* Numerically compute the semantic similarity of words from the [cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity) of their embedding vectors.
 
 Cosine similarity scores are **commutative**, which means that:
 ```python
